@@ -1,0 +1,22 @@
+{
+  "name": "greenbone-coding-challenge",
+  "version": "1.0.0",
+  "description": "Coding challenge for Greenbone",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Suyesha11/greenbone-coding-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Suyesha11/greenbone-coding-challenge/issues"
+  },
+  "homepage": "https://github.com/Suyesha11/greenbone-coding-challenge#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1"
+  }
+}
