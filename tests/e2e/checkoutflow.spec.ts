@@ -1,6 +1,6 @@
-import { test  } from '../fixtures/authenticated';
+import { test  } from '../../fixtures/authenticated';
 import { expect } from '@playwright/test';
-import { PRODUCTS , CHECKOUT } from '../fixtures/test-data';
+import { PRODUCTS , CHECKOUT } from '../../fixtures/test-data';
 
 test.describe('Checkout Flow', () => {
 

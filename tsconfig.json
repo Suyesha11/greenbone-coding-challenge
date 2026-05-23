@@ -11,5 +11,5 @@
         "tests/**/*",
         "pages/**/*",
         "fixtures/**/*"
-    ]
+, "fixtures", "pages"    ]
 }

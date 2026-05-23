@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
-import { LoginPage } from "../pages/LoginPage";
-import { USERS } from "../fixtures/test-data";
+import { LoginPage } from "../../pages/LoginPage";
+import { USERS } from "../../fixtures/test-data";
 
 test.describe("Authentication", () => {
     test('TC01 - Standard user can login and is redirected to inventory page', async ({page,}) => {
