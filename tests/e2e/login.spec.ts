@@ -7,7 +7,7 @@ test.describe("Authentication", () => {
     const loginPage = new LoginPage(page);
     await loginPage.goto();
     await loginPage.login(USERS.standard.username, USERS.standard.password);
-    await expect(page).toHaveURL(/inventory.html/);
+    await expect(page).toHaveURL(/inventory\.html/);
     });
 
     test('TC04 - Unauthenticated user accessing inventory directly is redirected to login', async ({ page }) => {

@@ -9,3 +9,15 @@ export const USERS={
     },
     
 };
+
+export const PRODUCTS = {
+    backpack:'Sauce Labs Backpack',
+    bikeLight:'Sauce Labs Bike Light',
+};
+
+export const CHECKOUT = {
+    firstName:'Alex',
+    lastName:'Costa',
+    postalCode:'10869',
+    
+}
