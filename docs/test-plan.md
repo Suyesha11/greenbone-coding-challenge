@@ -92,11 +92,11 @@ Automation design follows:
 | ---- | ---- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1    | TC01 | P1 - Critical | Login is the entry point to the entire application. If authentication fails for valid users, no other functionality is accessible and the business loses revenue entirely.                                                                                     |
 | 2    | TC03 | P1 - Critical | Invalid credential rejection protects against unauthorised access. The exact error message "Epic sadface: Username and password do not match any user in this service" must be shown. Preventing unauthorised access is a critical authentication requirement. |
-| 3    | TC04 | P1 - Critical | Direct URL access bypassing login is a security vulnerability. The app must redirect to login and show "Epic sadface: You can only access '/inventory.html' when you are logged in." critical for any application handling user data or purchases.             |
-| 4    | TC03 | P1 - Critical | Invalid credential rejection protects against unauthorised access. The exact error message "Epic sadface: Username and password do not match any user in this service" must be shown. Preventing unauthorised access is a critical authentication requirement. |
+| 3 | TC02 | P1 - Critical | Locked out users must be blocked at login with the exact error message "Epic sadface: Sorry, this user has been locked out." For a cybersecurity company, ensuring access control works correctly is fundamental to product trust. 
+| 4 | TC04 | P1 - Critical | Direct URL access bypassing login is a security vulnerability. The app must redirect to login and show "Epic sadface: You can only access '/inventory.html' when you are logged in." critical for any application handling user data or purchases. |
 | 5    | TC10 | P1 - Critical | The full checkout flow is the core business transaction. If a user cannot complete a purchase and see the confirmation, the business generates no revenue. This is the highest value user journey end to end.                                                  |
 | 6    | TC05 | P2 - High     | Adding products to cart is a prerequisite for checkout. Without this working correctly, users cannot complete any purchase regardless of how well the checkout flow functions.                                                                                 |
-| 7    | TC07 | P2 - High     | Cart accuracy directly affects purchase confidence. If product names, descriptions or prices display incorrectly, users may abandon or raise disputes — impacting revenue and trust.                                                                           |
+| 7    | TC07 | P2 - High     | Cart accuracy directly affects purchase confidence. If product names, descriptions or prices display incorrectly, users may abandon or raise disputes impacting revenue and trust.                                                                           |
 | 8    | TC09 | P2 - High     | Checkout overview accuracy ensures users see correct pricing and tax before confirming. Form validation also prevents incomplete orders where missing fields would result in orders without delivery information, causing operational failures downstream.     |
 | 9    | TC08 | P2 - High     | Removing items from the cart is a standard user expectation. If users cannot correct their cart before checkout, it leads to incorrect orders and poor user experience.                                                                                        |
 | 10   | TC06 | P3 - Medium   | Sorting helps users find products faster but is not critical to completing a purchase. The core checkout journey remains fully functional even if sorting options Name (A to Z), Name (Z to A), Price (low to high) and Price (high to low) are broken.        |
@@ -201,7 +201,7 @@ confirmation messages are displayed:
 ### Design Principles
 
 - Page Object Model (POM) for maintainability and reusability
-- Centralised test data in `fixtures/test-data.ts` — no hardcoded values in spec files
+- Centralised test data in `fixtures/test-data.ts` - no hardcoded values in spec files
 - Independent and parallelisable test execution
 - Assertions focused on business outcomes
 - CI/CD compatible via GitHub Actions

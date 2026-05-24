@@ -20,14 +20,15 @@ coding challenge.
 ---
 
 ## Project Structure
-
+ 
 ```
 greenbone-coding-challenge/
 ├── .github/
 │   └── workflows/
 │       └── playwright.yml        # CI/CD pipeline configuration
 ├── docs/
-│   └── test-plan.md              # Test cases, prioritization and detailed TCMS
+│   ├── test-plan.md              # Test cases, prioritization and detailed TCMS
+│   └── future-plans.md           # Planned improvements and extensions
 ├── fixtures/
 │   ├── authenticated.ts          # Playwright fixture for authenticated page and page objects
 │   └── test-data.ts              # Centralised test data (users, products, checkout info)
@@ -47,7 +48,7 @@ greenbone-coding-challenge/
 ├── README.md
 └── tsconfig.json                 # TypeScript configuration
 ```
-
+ 
 ---
 
 ## Prerequisites
@@ -299,3 +300,9 @@ Format all files before committing:
 npx prettier --write .
 ```
 
+## Future Plans
+ 
+Planned improvements and extensions to this automation suite are documented
+in [docs/future-plans.md](docs/future-plans.md). This includes expanded test
+coverage, API-level setup, visual regression testing, Allure reporting and
+CI/CD enhancements.

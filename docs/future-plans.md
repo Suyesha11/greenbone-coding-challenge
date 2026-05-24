@@ -20,9 +20,9 @@ and ensure the application handles degraded states gracefully.
 The following test cases were identified and prioritised but not automated 
 in this challenge. They would be the next candidates for automation:
 
-- **TC02** — Locked out user is denied access and sees the exact error 
+- **TC02** - Locked out user is denied access and sees the exact error 
   message "Epic sadface: Sorry, this user has been locked out."
-- **TC04** — Unauthenticated user attempting to directly access 
+- **TC04** - Unauthenticated user attempting to directly access 
   `/inventory.html` is redirected back to the login page with the exact 
   error message "Epic sadface: You can only access '/inventory.html' 
   when you are logged in."
