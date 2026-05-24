@@ -17,6 +17,10 @@
   "homepage": "https://github.com/Suyesha11/greenbone-coding-challenge#readme",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.9.1"
+    "@types/node": "^25.9.1",
+    "prettier": "^3.8.3"
+  },
+  "dependencies": {
+    "typescript": "^6.0.3"
   }
 }
