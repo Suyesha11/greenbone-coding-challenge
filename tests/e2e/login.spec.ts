@@ -12,13 +12,15 @@ test.describe("Authentication", () => {
     await expect(page).toHaveURL(/inventory\.html/);
   });
 
-  test("TC04 - Unauthenticated user accessing inventory directly is redirected to login", async ({
+  test("TC03 - User with invalid credentials sees error message and remains on login page", async ({
     page,
   }) => {
-    await page.goto("/inventory.html");
-    await expect(page).toHaveURL("/");
+    const loginPage = new LoginPage(page);
+    await loginPage.goto();
+    await loginPage.login(USERS.invalid.username, USERS.invalid.password);
     await expect(page.getByTestId("error")).toContainText(
-      "Epic sadface: You can only access '/inventory.html' when you are logged in.",
+      "Epic sadface: Username and password do not match any user in this service",
     );
+    await expect(page).toHaveURL(/.*saucedemo\.com\/?$/);
   });
 });
