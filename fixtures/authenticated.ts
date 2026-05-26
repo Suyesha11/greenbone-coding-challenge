@@ -13,16 +13,16 @@ type AuthenticatedFixtures = {
 };
 
 export const test = base.extend<AuthenticatedFixtures>({
-  authenticatedPage: async ({ page }, use) => {
+  authenticatedPage: async ({ page }, use): Promise<void> => {
     const loginPage = new LoginPage(page);
     await loginPage.goto();
     await loginPage.login(USERS.standard.username, USERS.standard.password);
     await use(page);
   },
-  productPage: async ({ authenticatedPage }, use) => {
+  productPage: async ({ authenticatedPage }, use): Promise<void> => {
     await use(new ProductPage(authenticatedPage));
   },
-  cartPage: async ({ authenticatedPage }, use) => {
+  cartPage: async ({ authenticatedPage }, use): Promise<void> => {
     await use(new CartPage(authenticatedPage));
   },
   checkoutPage: async ({ authenticatedPage }, use) => {
