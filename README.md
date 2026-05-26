@@ -40,7 +40,7 @@ greenbone-coding-challenge/
 ├── tests/
 │   └── e2e/
 │       ├── checkoutflow.spec.ts  # TC10 - Full checkout flow test
-│       └── login.spec.ts         # TC01, TC04 - Authentication tests
+│       └── login.spec.ts         # TC01, TC03 - Authentication tests
 ├── .gitignore
 ├── package-lock.json
 ├── package.json
@@ -160,7 +160,7 @@ and reasoning are documented in [docs/test-plan.md](docs/test-plan.md).
 | Test ID | Description                                                              | Priority      | Spec File            |
 | ------- | ------------------------------------------------------------------------ | ------------- | -------------------- |
 | TC01    | Standard user can login and is redirected to inventory page              | P1 - Critical | login.spec.ts        |
-| TC04    | Unauthenticated user accessing inventory directly is redirected to login | P1 - Critical | login.spec.ts        |
+| TC03    | User with invalid credentials sees error message and remains on login page | P1 - Critical | login.spec.ts        |
 | TC10    | User can complete full checkout flow and sees order confirmation         | P1 - Critical | checkoutflow.spec.ts |
 
 ---

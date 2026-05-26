@@ -180,10 +180,13 @@ confirmation messages are displayed:
 
 ### Notes & Assumptions
 
-- Test is run on Chromium browser
+
+- Tests are run on Chromium, Firefox and WebKit browsers
+- Primary development browser is Chromium
+- Full cross-browser suite runs automatically via GitHub Actions CI
 - No prior session or cookies should be present before test execution
 - Credentials and all test data are sourced from `test-data.ts` and not hardcoded
-- Product price and tax values are not hardcoded in assertions relative checks are used instead
+- Product price and tax values are not hardcoded in assertions  relative checks are used instead
 
 ---
 
